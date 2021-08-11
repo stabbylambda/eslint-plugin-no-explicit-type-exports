@@ -14,7 +14,7 @@ enum typeDeclarationTypes {
  * Checks if a node is an interface or a type.
  */
 function isType(
-  node: TSESTree.Statement,
+  node: TSESTree.ExportDeclaration | TSESTree.Statement,
 ): node is TSESTree.TSInterfaceDeclaration {
   return Object.keys(typeDeclarationTypes).includes(node.type);
 }
